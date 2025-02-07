@@ -46,7 +46,7 @@ async def handle_call_tool(
     if url is None:
         raise ValueError("Missing 'url' in arguments")
 
-    summary, tree, content = ingest(url)
+    summary, tree, content = await ingest(url)
 
     return [types.TextContent(type="text", text=json.dumps({
         "summary": summary,
