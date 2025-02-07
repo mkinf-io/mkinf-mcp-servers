@@ -1,0 +1,18 @@
+[project]
+name = "gitingest_mcp"
+version = "0.1.2"
+description = "Replace 'hub' with 'ingest' in any github url to get a prompt-friendly extract of a codebase"
+authors = [{ name = "cyclotruc" }]
+requires-python = "~=3.12"
+readme = "README.md"
+dependencies = [
+    "gitingest==0.1.2",
+    "mcp>=1.2.1",
+]
+
+[project.scripts]
+gitingest = "gitingest_mcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
