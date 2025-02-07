@@ -4,6 +4,7 @@ import mcp.server.stdio
 import mcp.types as types
 from mcp.server import NotificationOptions, Server
 from mcp.server.models import InitializationOptions
+import asyncio
 
 server = Server("gitingest")
 
@@ -46,7 +47,7 @@ async def handle_call_tool(
     if url is None:
         raise ValueError("Missing 'url' in arguments")
 
-    summary, tree, content = await ingest(url)
+    summary, tree, content = await asyncio.to_thread(ingest, url)
 
     return [types.TextContent(type="text", text=json.dumps({
         "summary": summary,
