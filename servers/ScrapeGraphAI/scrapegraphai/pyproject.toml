@@ -1,5 +1,5 @@
 [project]
-name = "scrapegraphai_tool"
+name = "scrapegraphai_mcp"
 version = "1.36.0"
 description = "Python scraper based on AI"
 authors = [{ name = "ScrapeGraphAI" }]
@@ -10,6 +10,9 @@ dependencies = [
     "pydantic==2.10.3",
     "scrapegraphai==1.36.0",
 ]
+
+[project.scripts]
+scrapegraphai = "scrapegraphai_mcp:main"
 
 [build-system]
 requires = ["hatchling"]

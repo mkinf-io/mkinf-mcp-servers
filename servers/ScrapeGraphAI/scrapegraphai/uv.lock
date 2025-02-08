@@ -1342,7 +1342,7 @@ wheels = [
 ]
 
 [[package]]
-name = "scrapegraphai-tool"
+name = "scrapegraphai-mcp"
 version = "1.36.0"
 source = { editable = "." }
 dependencies = [
