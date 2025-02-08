@@ -1,0 +1,18 @@
+[project]
+name = "bing_search"
+version = "0.1.0"
+description = ""
+authors = [{ name = "Langchain" }]
+requires-python = "~=3.12"
+readme = "README.md"
+dependencies = [
+    "langchain-community>=0.3.9",
+    "mcp>=1.2.1",
+]
+
+[project.scripts]
+bing_search = "bing_search:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
