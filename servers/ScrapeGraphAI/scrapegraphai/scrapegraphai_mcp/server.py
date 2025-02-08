@@ -42,7 +42,7 @@ async def handle_call_tool(
     Handle tool execution requests.
     Tools can modify server state and notify clients of changes.
     """
-    if name != "anonymize": raise ValueError(f"Unknown tool: {name}")
+    if name != "run": raise ValueError(f"Unknown tool: {name}")
     if not arguments: raise ValueError("Missing arguments")
 
     prompt = arguments.get("prompt")
