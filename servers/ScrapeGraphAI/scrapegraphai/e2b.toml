@@ -1,0 +1,16 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (or7t8gtge2jwgjz7waks) or template name (scrapegraphai__scrapegraphai) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("scrapegraphai__scrapegraphai") # Sync sandbox
+# sandbox = await AsyncSandbox.create("scrapegraphai__scrapegraphai") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('scrapegraphai__scrapegraphai')
+
+team_id = "6154833f-d6de-4abb-929b-c580b082ebf9"
+dockerfile = "e2b.Dockerfile"
+template_name = "scrapegraphai__scrapegraphai"
+template_id = "or7t8gtge2jwgjz7waks"
