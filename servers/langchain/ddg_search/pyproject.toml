@@ -1,0 +1,19 @@
+[project]
+name = "ddg_search"
+version = "0.1.0"
+description = ""
+authors = [{ name = "Langchain" }]
+requires-python = "~=3.12"
+readme = "README.md"
+dependencies = [
+    "duckduckgo-search==6.3.7",
+    "langchain-community>=0.3.17",
+    "mcp>=1.2.1",
+]
+
+[project.scripts]
+ddg_search = "ddg_search:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
