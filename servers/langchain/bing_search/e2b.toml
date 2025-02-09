@@ -1,0 +1,16 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (heyctit9lbr7um82vq8t) or template name (langchain__bing_search) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("langchain__bing_search") # Sync sandbox
+# sandbox = await AsyncSandbox.create("langchain__bing_search") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('langchain__bing_search')
+
+team_id = "6154833f-d6de-4abb-929b-c580b082ebf9"
+dockerfile = "e2b.Dockerfile"
+template_name = "langchain__bing_search"
+template_id = "heyctit9lbr7um82vq8t"
