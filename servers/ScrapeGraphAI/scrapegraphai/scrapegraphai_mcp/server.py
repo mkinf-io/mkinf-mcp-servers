@@ -1,4 +1,5 @@
 import os
+import asyncio
 import mcp.server.stdio
 import mcp.types as types
 from mcp.server import NotificationOptions, Server
@@ -67,8 +68,10 @@ async def handle_call_tool(
             "headless": True,
         }
     )
+    
+    result = await asyncio.to_thread(smart_scraper_graph.run)
 
-    return [types.TextContent(type="text", text=smart_scraper_graph.run())]
+    return [types.TextContent(type="text", text=str(result))]
 
 
 async def main():
