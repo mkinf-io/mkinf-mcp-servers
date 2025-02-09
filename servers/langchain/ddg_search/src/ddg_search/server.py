@@ -16,8 +16,8 @@ async def handle_list_tools() -> list[types.Tool]:
     """
     return [
         types.Tool(
-            name=DuckDuckGoSearchRun.name,
-            description=DuckDuckGoSearchRun.description,
+            name=DuckDuckGoSearchRun().name,
+            description=DuckDuckGoSearchRun().description,
             inputSchema={
               "type": "object",
               "required": ["query"],
@@ -36,7 +36,7 @@ async def handle_call_tool(
     Tools can modify server state and notify clients of changes.
     """
     if not arguments: raise ValueError("Missing arguments")
-    if name != DuckDuckGoSearchRun.name: raise ValueError(f"Unknown tool: {name}")
+    if name != DuckDuckGoSearchRun().name: raise ValueError(f"Unknown tool: {name}")
     
     ddg_search_run = DuckDuckGoSearchRun()
     result = await asyncio.to_thread(ddg_search_run.run, arguments)

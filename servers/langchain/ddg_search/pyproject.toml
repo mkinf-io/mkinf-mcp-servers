@@ -6,7 +6,7 @@ authors = [{ name = "Langchain" }]
 requires-python = "~=3.12"
 readme = "README.md"
 dependencies = [
-    "duckduckgo-search==6.3.7",
+    "duckduckgo-search>=7.3.2",
     "langchain-community>=0.3.17",
     "mcp>=1.2.1",
 ]
