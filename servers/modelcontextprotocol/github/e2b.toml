@@ -1,0 +1,16 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (b3bhxctg6nib1e5qd8mf) or template name (modelcontextprotocol__github) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("modelcontextprotocol__github") # Sync sandbox
+# sandbox = await AsyncSandbox.create("modelcontextprotocol__github") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('modelcontextprotocol__github')
+
+team_id = "6154833f-d6de-4abb-929b-c580b082ebf9"
+dockerfile = "e2b.Dockerfile"
+template_name = "modelcontextprotocol__github"
+template_id = "b3bhxctg6nib1e5qd8mf"
