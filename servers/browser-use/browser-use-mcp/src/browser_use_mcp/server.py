@@ -1,3 +1,4 @@
+import traceback
 import mcp.server.stdio
 import mcp.types as types
 from mcp.server import NotificationOptions, Server
@@ -53,7 +54,7 @@ async def handle_call_tool(
     
     # Arguments
     if not arguments: raise ValueError("Missing arguments")
-    max_steps = arguments.get("max_steps", 10)
+    max_steps = int(arguments.get("max_steps", 10))
     task = arguments.get("task")
     if not task: raise ValueError("Missing task")
 
@@ -68,6 +69,7 @@ async def handle_call_tool(
         await agent.run(max_steps=max_steps)
         await browser.close()
     except Exception as e:
+        traceback.print_exc()
         print(e)
         raise ValueError(f"Error processing task: {str(e)}")
 

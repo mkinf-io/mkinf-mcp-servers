@@ -1,0 +1,16 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (ffx0gwfm1sp4qz0j83qp) or template name (browser-use__browser-use-mcp) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("browser-use__browser-use-mcp") # Sync sandbox
+# sandbox = await AsyncSandbox.create("browser-use__browser-use-mcp") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('browser-use__browser-use-mcp')
+
+team_id = "6154833f-d6de-4abb-929b-c580b082ebf9"
+dockerfile = "e2b.Dockerfile"
+template_name = "browser-use__browser-use-mcp"
+template_id = "ffx0gwfm1sp4qz0j83qp"

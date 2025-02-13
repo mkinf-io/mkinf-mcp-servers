@@ -19,4 +19,4 @@ RUN uv sync
 
 # Install playwright
 RUN uv pip install playwright
-RUN uv run playwright install
+RUN uv run playwright install --with-deps
