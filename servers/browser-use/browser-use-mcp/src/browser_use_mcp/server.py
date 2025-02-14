@@ -64,7 +64,8 @@ async def handle_call_tool(
         agent = Agent(
             task=task,
             llm=model,
-            browser=browser
+            browser=browser,
+            generate_gif=False
         )
         await agent.run(max_steps=max_steps)
         await browser.close()
@@ -73,7 +74,7 @@ async def handle_call_tool(
         print(e)
         raise ValueError(f"Error processing task: {str(e)}")
 
-    return [types.TextContent(type="text", text=agent.history.model_dump_json())]
+    return [types.TextContent(type="text", text=agent.history.model_dump_json(exclude=set(["screenshot"])))]
 
 
 async def main():
