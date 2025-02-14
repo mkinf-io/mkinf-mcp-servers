@@ -51,7 +51,7 @@ async def handle_call_tool(
     llm_api_key = env.str("LLM_API_KEY")
     headless = env.bool("HEADLESS", True)
     if not llm_api_key: raise ValueError("Missing LLM API key")
-    
+
     # Arguments
     if not arguments: raise ValueError("Missing arguments")
     max_steps = int(arguments.get("max_steps", 10))
@@ -74,7 +74,14 @@ async def handle_call_tool(
         print(e)
         raise ValueError(f"Error processing task: {str(e)}")
 
-    return [types.TextContent(type="text", text=agent.history.model_dump_json(exclude=set(["screenshot"])))]
+    return [
+      types.TextContent(
+        type="text",
+        text=agent.history.model_dump_json(
+          exclude={"history": {"__all__": {"state": {"screenshot"}}}}
+        )
+      )
+    ]
 
 
 async def main():
