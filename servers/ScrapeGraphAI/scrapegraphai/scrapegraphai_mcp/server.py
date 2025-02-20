@@ -1,3 +1,4 @@
+import json
 import os
 import asyncio
 import mcp.server.stdio
@@ -71,7 +72,7 @@ async def handle_call_tool(
     
     result = await asyncio.to_thread(smart_scraper_graph.run)
 
-    return [types.TextContent(type="text", text=str(result))]
+    return [types.TextContent(type="text", text=json.dumps(result))]
 
 
 async def main():
