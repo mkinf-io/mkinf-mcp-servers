@@ -1,0 +1,19 @@
+[project]
+name = "anonymize_pii"
+version = "1.0.0"
+description = "Glaider allows you to anonymize personally identifiable information (PII) in text data before processing it with AI models or storing it. The service automatically detects and anonymizes sensitive information such as personal names, locations, organizations, email addresses, IP addresses, access tokens, API keys, credit card numbers, and more."
+authors = [{ name = "glaider", email = "info@glaider.it" }]
+requires-python = "~=3.12"
+readme = "README.md"
+dependencies = [
+    "mcp>=1.2.1",
+    "pydantic==2.10.3",
+    "requests==2.32.3",
+]
+
+[project.scripts]
+anonymize_pii = "anonymize_pii:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
